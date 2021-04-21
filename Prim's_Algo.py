@@ -16,11 +16,10 @@ class Graph :
         min_span_tree_cost = 0
 
         while priority_queue :
-            # Choose the adjacent node with the least edge cost
+
             node = min (priority_queue, key=priority_queue.get)
             cost = priority_queue[node]
 
-            # Remove the node from the priority queue
             del priority_queue[node]
 
             if added[node._id] == False :
@@ -40,7 +39,6 @@ def main() :
 
     g1_edges_from_node = {}
 
-    # Outgoing edges from the node: (adjacent_node, cost) in graph 1.
     g1_edges_from_node[0] = [ (1,1), (2,2), (3,1), (4,1), (5,2), (6,1) ]
     g1_edges_from_node[1] = [ (0,1), (2,2), (6,2) ]
     g1_edges_from_node[2] = [ (0,2), (1,2), (3,1) ]
